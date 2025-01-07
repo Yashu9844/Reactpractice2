@@ -15,7 +15,7 @@ const App = () => {
       setUsers(data.users.map(user=>user.firstName))
       
      }
- console.log(users);
+
      const handleChanges = (e) => {
       
       const query = e.target.value.toLowerCase();
@@ -30,7 +30,7 @@ const App = () => {
           }
 
      }
-   console.log(filteredUsers);
+
      useEffect(() =>{
       fetchusers();
      },[]);
