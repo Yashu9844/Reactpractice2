@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+
+     const [users , setUsers] = useState([]);
+     const [inputValue, setInputValue] = useState('');
+     const [filteredUsers, setFilteredUsers] = useState([]);
+
+
+     const fetchusers =async ()=>{
+
+      const res = await fetch('https://dummyjson.com/users')
+      const data = await res.json()
+
+      setUsers(data.users.map(user=>user.firstName))
+      
+     }
+ console.log(users);
+     const handleChanges = (e) => {
+      
+      const query = e.target.value.toLowerCase();
+      setInputValue(e.target.value);
+          if(query.length > 1){
+          const filterData = users && users.length ? users.filter(user => user.toLowerCase().indexOf(query) > -1) : [];
+          setFilteredUsers(filterData);
+          }
+
+     }
+   console.log(filteredUsers);
+     useEffect(() =>{
+      fetchusers();
+     },[]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+        <input type='text' value={inputValue} onChange={handleChanges} />
+    </div>
   )
 }
 
-export default App
+  export default App
