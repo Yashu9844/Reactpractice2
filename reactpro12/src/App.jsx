@@ -46,11 +46,11 @@ const App = () => {
     <div style={{textAlign:'center',
       
     }}>
-        <input style={{padding:'5px'}} type='text' value={inputValue} onChange={handleChanges}  placeholder='Please type the name...'/>
+        <input style={{padding:'5px',cursor:'pointer'}} type='text' value={inputValue} onChange={handleChanges}  placeholder='Please type the name...'/>
         {showDrop && 
         <ul>
           {filteredUsers.map((user,index) => (
-            <h5 key={index} onClick={hc}>{user}</h5>
+            <h5 key={index} style={{cursor:'pointer'}} onClick={hc}>{user}</h5>
           ))}
         </ul>
         
