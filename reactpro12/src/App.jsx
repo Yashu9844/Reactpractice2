@@ -35,6 +35,13 @@ const App = () => {
       fetchusers();
      },[]);
 
+ const hc = (e) => {
+   setInputValue(e.target.innerText);
+   setDrop(false);
+   setFilteredUsers([]);
+ }
+
+
   return (
     <div style={{textAlign:'center',
       
@@ -43,7 +50,7 @@ const App = () => {
         {showDrop && 
         <ul>
           {filteredUsers.map((user,index) => (
-            <h5 key={index}>{user}</h5>
+            <h5 key={index} onClick={hc}>{user}</h5>
           ))}
         </ul>
         
