@@ -71,7 +71,7 @@ const App = () => {
         </div>
       </div>
       <button className="restart-button" onClick={restartGame}>
-        Resta
+        Restart
       </button>
     </div>
   );
