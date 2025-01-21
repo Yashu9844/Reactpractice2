@@ -50,7 +50,7 @@ const App = () => {
         {showDrop && 
         <ul>
           {filteredUsers.map((user,index) => (
-            <h5 key={index} style={{cursor:'pointer'}} onClick={hc}>{user} hh</h5>
+            <h5 key={index} style={{cursor:'pointer'}} onClick={hc}>{user} </h5>
           ))}
         </ul>
         
