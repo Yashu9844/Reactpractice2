@@ -17,10 +17,18 @@ const App = () => {
       
       behavior:'smooth'})
     }
+
+    const handleScrollToBabu = () => {
+      const element = document.querySelector(".babu");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+    
   return (
     <div>
       <div className="" >
-        <button onClick={handleBottom}>Scroll to Bottom</button>
+        <button onClick={handleScrollToBabu}>Scroll to Bottom</button>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
@@ -81,6 +89,9 @@ const App = () => {
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
+        <div className="babu">
+       <h1>hello everyone here is the babu </h1> 
+       </div>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
@@ -93,7 +104,7 @@ const App = () => {
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
-        <h1>hello everyone </h1>
+     
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
