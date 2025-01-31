@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useRef } from 'react'
 import useOut from './useOut'
+import newHook from './newHook'
 
 const App = () => {
 
@@ -13,6 +14,12 @@ const App = () => {
  useEffect(()=>{
    console.log(ref.current)
  },[ref])
+
+
+const windowSize = newHook();
+
+const {width , height} = windowSize
+
   return (
     <div>
      hello buddy jsut checking the status of my skills forgot or not 
@@ -27,6 +34,11 @@ const App = () => {
           ) : (
             <button  onClick={()=> setShow(true)} >Show</button>
           )}
+            
+             <p> window width: {width}px </p>
+             <p> window height: {height}px </p>
+
+
      </div>
     </div>
   )
