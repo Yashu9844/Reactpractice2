@@ -22,7 +22,6 @@ const {width , height} = windowSize
 
   return (
     <div>
-     hello buddy jsut checking the status of my skills forgot or not 
 
      <div className="" ref={ref}>
           { show    ? (
