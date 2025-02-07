@@ -27,7 +27,7 @@ const {width , height} = windowSize
           { show    ? (
 
             <div>
-             <h3> this something crazy right </h3>
+             <h3> this  crazy right </h3>
 
             </div>
           ) : (
