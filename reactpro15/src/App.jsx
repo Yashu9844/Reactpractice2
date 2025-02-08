@@ -57,8 +57,7 @@ const App = () => {
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
-        <h1>hello everyone </h1>
-        <h1>hello everyone </h1>
+        
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
