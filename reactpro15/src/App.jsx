@@ -87,7 +87,6 @@ const App = () => {
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
         <h1>hello everyone </h1>
-        <h1>hello everyone </h1>
         <div className="babu">
        <h1>hello everyone here is the babu </h1> 
        </div>
