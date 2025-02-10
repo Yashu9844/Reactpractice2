@@ -36,6 +36,8 @@ const {width , height} = windowSize
             
              <p> window width: {width}px </p>
              <p> window height: {height}px </p>
+             <p> window width: {width}px </p>
+             <p> window height: {height}px </p>
 
 
      </div>
