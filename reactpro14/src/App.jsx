@@ -31,7 +31,7 @@ const {width , height} = windowSize
 
             </div>
           ) : (
-            <button  onClick={()=> setShow(true)} >Sow</button>
+            <button  onClick={()=> setShow(true)} >Show</button>
           )}
             
              <p> window width: {width}px </p>
